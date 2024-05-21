@@ -4,13 +4,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 const firebaseConfig = {
-  apiKey: "AIzaSyCNvjVHy-NcfTjr9THNkA1jDUTi85PIOY8",
-  authDomain: "glimmer-app-9b128.firebaseapp.com",
-  projectId: "glimmer-app-9b128",
-  storageBucket: "glimmer-app-9b128.appspot.com",
-  messagingSenderId: "1061450959031",
-  appId: "1:1061450959031:web:425e6896d16de351d66532",
-  measurementId: "G-BWLW6TQ7LL",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
