@@ -11,7 +11,7 @@ function AuthForm() {
     <>
       <Box border={"1px solid gray"} borderRadius={4} padding={5}>
         <VStack spacing={4}>
-          <Image src="/glimmer.png" h={24} cursor={"pointer"} alt="Instagram" />
+          <Image src="/glimmer.png" h={24} cursor={"pointer"} alt="Glimmer" />
 
           {isLogin ? <Login /> : <Signup />}
           <Flex
