@@ -36,10 +36,13 @@ const FeedPosts = () => {
         posts.map((post) => <FeedPost key={post.id} post={post} />)}
       {!isLoading && posts.length === 0 && (
         <>
-          <Text fontSize={"md"} color={"red.400"}>
-            Looks like you don&apos;t have any friends.
+          <Text fontSize="lg" color="red.400">
+            Wow, surprise! You&apos;re all alone here.
           </Text>
-          <Text color={"red.400"}>Stop coding and go make some!!</Text>
+          <Text color="red.400">
+            Maybe it&apos;s time to step away from the code and actually
+            socialize. Just a thought! XD
+          </Text>
         </>
       )}
     </Container>
