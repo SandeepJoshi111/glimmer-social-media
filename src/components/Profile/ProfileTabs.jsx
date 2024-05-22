@@ -23,7 +23,17 @@ function ProfileTabs() {
           Posts
         </Text>
       </Flex>
-      <Flex alignItems={"center"} p={3} gap={1} cursor={"pointer"}>
+      <Flex
+        alignItems={"center"}
+        p={3}
+        gap={1}
+        cursor={"pointer"}
+        disabled
+        _disabled={{
+          cursor: "not-allowed", // Cursor style when disabled
+          opacity: 0.2, // Opacity when disabled
+        }}
+      >
         <Box fontSize={20}>
           <BsBookmark />
         </Box>
@@ -31,7 +41,17 @@ function ProfileTabs() {
           Saved
         </Text>
       </Flex>
-      <Flex alignItems={"center"} p={3} gap={1} cursor={"pointer"}>
+      <Flex
+        alignItems={"center"}
+        p={3}
+        gap={1}
+        cursor={"pointer"}
+        disabled
+        _disabled={{
+          cursor: "not-allowed", // Cursor style when disabled
+          opacity: 0.2, // Opacity when disabled
+        }}
+      >
         <Box fontSize={20}>
           <BsSuitHeart fontWeight={"bold"} />
         </Box>

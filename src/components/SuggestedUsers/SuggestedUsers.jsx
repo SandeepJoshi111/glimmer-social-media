@@ -8,16 +8,21 @@ function SuggestedUsers() {
 
   if (isLoading) return null;
   return (
-    <VStack py={8} px={6} gap={4}>
-      <SuggestedHeader />
+    <>
+      <VStack py={8} px={6} gap={4}>
+        <SuggestedHeader />
 
-      {suggeestedUsers.length !== 0 && (
-        <Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
-          <Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
-            {" "}
-            Suggested for you
-          </Text>
-          <Text
+        {suggeestedUsers.length !== 0 && (
+          <Flex
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            w={"full"}
+          >
+            <Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
+              {" "}
+              Suggested for you
+            </Text>
+            {/* <Text
             fontSize={12}
             fontWeight={"bold"}
             _hover={{ color: "gray.400" }}
@@ -25,14 +30,22 @@ function SuggestedUsers() {
           >
             {" "}
             See All
-          </Text>
-        </Flex>
-      )}
-      {suggeestedUsers.map((user) => (
-        <SuggestedUser user={user} key={user.id} />
-      ))}
-
-      <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
+          </Text> */}
+          </Flex>
+        )}
+        {suggeestedUsers.map((user) => (
+          <SuggestedUser user={user} key={user.id} />
+        ))}
+      </VStack>
+      <Box
+        py={8}
+        px={6}
+        gap={4}
+        fontSize={12}
+        color={"gray.500"}
+        position={"absolute"}
+        bottom={"0"}
+      >
         &copy;2023 Built By{" "}
         <Link
           href="https://sandeepjoshi.vercel.app/"
@@ -43,7 +56,7 @@ function SuggestedUsers() {
           Sandeep Joshi
         </Link>
       </Box>
-    </VStack>
+    </>
   );
 }
 

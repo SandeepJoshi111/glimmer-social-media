@@ -9,8 +9,23 @@ const FeedPost = ({ post }) => {
   return (
     <>
       <PostHeader post={post} creatorProfile={userProfile} />
-      <Box my={2} borderRadius={4} overflow={"hidden"}>
-        <Image src={post.imageURL} alt={"FEED POST IMG"} />
+      <Box
+        my={2}
+        borderRadius={4}
+        overflow={"hidden"}
+        w={"full"}
+        minH={{ base: "300px", md: "600px" }}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <Image
+          src={post.imageURL}
+          alt={"FEED POST IMG"}
+          w={"full"}
+          h={"full"}
+          objectFit={"cover"}
+        />
       </Box>
       <PostFooter post={post} creatorProfile={userProfile} />
     </>

@@ -112,7 +112,7 @@ function ProfilePost({ post }) {
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        isCentered={true}
+        isCentered
         size={{ base: "3xl", md: "5xl" }}
       >
         <ModalOverlay />
@@ -123,8 +123,7 @@ function ProfilePost({ post }) {
               gap={4}
               w={{ base: "90%", sm: "70%", md: "full" }}
               mx={"auto"}
-              maxH={"90vh"}
-              minH={"50vh"}
+              height={"600px"}
             >
               {/* Image Content Modal */}
               <Flex
@@ -135,8 +134,15 @@ function ProfilePost({ post }) {
                 flex={1.5}
                 justifyContent={"center"}
                 alignItems={"center"}
+                maxH={600}
               >
-                <Image src={post.imageURL} alt="profile post" />
+                <Image
+                  src={post.imageURL}
+                  alt="profile post"
+                  objectFit={"contain"}
+                  w={"full"}
+                  h={"full"}
+                />
               </Flex>
 
               {/* Content Side */}
